@@ -23,7 +23,7 @@ function strOccurences(char, str) {
 
 // console.log(strOccurences('l', 'hello'));
 
-// FInd duplicate in an array of numbers
+// Find duplicate in an array of numbers with just one duplicated element
 function findDuplicated(arr) {
   let sortedArr = arr.sort();
   for (let i = 0; i < sortedArr.length - 1; i++) {
@@ -37,5 +37,23 @@ function findDuplicated(arr) {
   return 'Sorry no repeated numbers';
 }
 
-const arr1 = [7, 24, 81, 32, 55, 1, 43, 99, -3, 43, 1230];
+const arr1 = [7, 24, 81, 32, 55, 1, 43, 99, -3, 43, 1230, 7];
 console.log(findDuplicated(arr1));
+
+// Find all duplicates in an array of numbers
+function findAllDup(arr) {
+  let obj = {};
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if(obj[arr[i]]) {
+      res.push(arr[i]);
+    } else {
+      obj[arr[i]] = 1;
+    }
+  }
+
+  return res;
+}
+
+const arr2 = [7, 24, 81, 32, 55, 1, 43, 99, -3, 43, 1230, 7, -3];
+console.log(findAllDup(arr2));
