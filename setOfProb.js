@@ -12,6 +12,18 @@ function computeSum1(list) {
   return res;
 }
 
+function computeSum2(list) {
+  // copy list in order to NOT modify the original
+  const copiedList = JSON.parse(JSON.stringify(list));
+  let res = 0;
+  while(copiedList.length > 0) {
+    let temp = copiedList.pop();
+    res += temp;
+  }
+
+  return res;
+}
+
 const l1 = [21, 7, 3, 5, 13];
 console.log(computeSum1(l1));
 console.log(computeSum2(l1));
