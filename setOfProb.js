@@ -24,6 +24,12 @@ function computeSum2(list) {
   return res;
 }
 
+function computeSum3(list) {
+  return list.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+}
+
 const l1 = [21, 7, 3, 5, 13];
 console.log(computeSum1(l1));
 console.log(computeSum2(l1));
