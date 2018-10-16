@@ -30,10 +30,27 @@ function computeSum3(list) {
   }, 0);
 }
 
-const l1 = [21, 7, 3, 5, 13];
-console.log(computeSum1(l1));
-console.log(computeSum2(l1));
-console.log(computeSum3(l1));
+// const l1 = [21, 7, 3, 5, 13];
+// console.log(computeSum1(l1));
+// console.log(computeSum2(l1));
+// console.log(computeSum3(l1));
+
+// 2-) Write a function that combines two lists by alternatingly taking elements. For example: given the two 
+// lists [a, b, c] and [1, 2, 3], the function should return [a, 1, b, 2, c, 3].
+
+function combineLists(list1, list2) {
+  const res = [];
+  for (let i = 0; i < list1.length; i++) {
+    res.push(list1[i]);
+    res.push(list2[i]);
+  }
+
+  return res;
+}
+
+const l1 = ['a', 'b', 'c'];
+const l2 = [1, 2, 3];
+console.log(combineLists(l1, l2));
 
 // 4-) Write a function that given a list of non negative integers, arranges them such that they form the largest 
 // possible number. For example, given [50, 2, 1, 9], the largest formed number is 95021.
